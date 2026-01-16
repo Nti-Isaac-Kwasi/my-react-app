@@ -63,7 +63,8 @@ const firebaseConfig = {
 }
 
 // Sanitized App ID
-const rawAppId = typeof __app_id !== 'undefined' ? __app_id : 'gip-pro-default';
+// Change from 'gip-pro-default' to 'gip-pro-ecosystem'
+const rawAppId = typeof __app_id !== 'undefined' ? __app_id : 'gip-pro-ecosystem'; // ← Fixed!
 const appId = rawAppId.replace(/\//g, '_');
 
 // --- MAIN APP COMPONENT ---
