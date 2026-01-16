@@ -37,7 +37,16 @@ try {
     configStr = import.meta.env.VITE_FIREBASE_CONFIG;
   }
 
-  const firebaseConfig = configStr ? JSON.parse(configStr) : {};
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAGkGVHJmnWOyPY_ka_arfHo4QwkW1feAE",
+  authDomain: "gip-pro-training.firebaseapp.com",
+  projectId: "gip-pro-training",
+  storageBucket: "gip-pro-training.firebasestorage.app",
+  messagingSenderId: "150694855839",
+  appId: "1:150694855839:web:d4412e99068fffadda8eaa",
+  measurementId: "G-THSQ4GFJG1"
+};
 
   // 3. Validate Config
   if (!firebaseConfig || Object.keys(firebaseConfig).length === 0) {
