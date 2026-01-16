@@ -30,7 +30,7 @@ import {
   serverTimestamp 
 } from "firebase/firestore";
 
-// --- FIREBASE CONFIGURATION ---
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyAGkGVHJmnWOyPY_ka_arfHo4QwkW1feAE",
   authDomain: "gip-pro-training.firebaseapp.com",
@@ -45,7 +45,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-const appId = "gip-pro-training"; // or your Firestore document ID
+const APP_ID = typeof __app_id !== 'undefined' ? __app_id : "gip-pro-ecosystem";
 
 // Fallback for auth token
 const __initial_auth_token = null;
