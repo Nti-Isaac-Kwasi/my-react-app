@@ -31,7 +31,6 @@ import {
 } from "firebase/firestore";
 
 // --- FIREBASE CONFIGURATION ---
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyAGkGVHJmnWOyPY_ka_arfHo4QwkW1feAE",
   authDomain: "gip-pro-training.firebaseapp.com",
@@ -42,8 +41,18 @@ const firebaseConfig = {
   measurementId: "G-THSQ4GFJG1"
 };
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const appId = "gip-pro-training"; // or your Firestore document ID
+
+// Fallback for auth token
+const __initial_auth_token = null;
+
 // --- MAIN APP COMPONENT ---
 export default function App() {
+  // ... rest of your code
   // --- STATE ---
   const [user, setUser] = useState(null);
   const [userData, setUserData] = useState({
