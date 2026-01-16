@@ -30,7 +30,7 @@ import {
   serverTimestamp 
 } from "firebase/firestore";
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// --- FIREBASE CONFIGURATION ---
 const firebaseConfig = {
   apiKey: "AIzaSyAGkGVHJmnWOyPY_ka_arfHo4QwkW1feAE",
   authDomain: "gip-pro-training.firebaseapp.com",
@@ -45,11 +45,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-const APP_ID = typeof __app_id !== 'undefined' ? __app_id : "gip-pro-ecosystem";
+const appId = "gip-pro-ecosystem"; // Changed to match admin
 
 // Fallback for auth token
 const __initial_auth_token = null;
-
 // --- MAIN APP COMPONENT ---
 export default function App() {
   // ... rest of your code
